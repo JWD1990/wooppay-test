@@ -1,8 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 import config.base as conf
 from db import db
-from web.view import get_form_data
+from web.view import get_form_data, get_report_data
+
 
 app = Flask(
     __name__,
@@ -20,6 +21,18 @@ def home():
         'report.html',
         committee_names=form_data[0],
         candidate_names=form_data[1],
+    )
+
+
+@app.route("/report", methods=['POST'])
+def get_report():
+    form_data = get_form_data()
+    report_data = get_report_data(request.form)
+    return render_template(
+        'report.html',
+        committee_names=form_data[0],
+        candidate_names=form_data[1],
+        report_data=report_data
     )
 
 

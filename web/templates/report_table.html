@@ -1,0 +1,16 @@
+<div class="report-table-block">
+    <table class="report-table">
+        <tr>
+            {%for col_name in report_data[0] %}
+            <th>{{col_name}}</th>
+            {%endfor%}
+        </tr>
+        {%for record in report_data[1] %}
+        <tr>
+            {%for col_name in report_data[0] %}
+            <td >{{record[col_name]}}</td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
+</div>

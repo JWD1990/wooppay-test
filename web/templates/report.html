@@ -9,7 +9,11 @@
 <body>
     <div class="container">
         {% include "request_form.html" %}
-        {% include "instruction.html" %}
+        {% if report_data %}
+            {% include "report_table.html" %}
+        {% else %}
+            {% include "instruction.html" %}
+        {% endif %}
     </div>
 </body>
 </html>
