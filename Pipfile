@@ -8,6 +8,7 @@ flask = "*"
 sqlalchemy = "*"
 psycopg2-binary = "*"
 pandas = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
