@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Страница формирования отчета</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </head>
 <body>
-
-{% block request_form %}
-{% endblock%}
-
-{% block response_table %}
-{% endblock %}
-
+    <div class="container">
+        {% include "request_form.html" %}
+        {% include "instruction.html" %}
+    </div>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<form action="/report" method="post">
+    <div class="select-committees-block">
+        <label for="committees-list">Укажите коммитеты, по которым необходимо сформировать отчёт</label><br />
+        <select id="committees-list" name="committees-list" multiple>
+            {%for name in committee_names %}
+            <option value="{{name}}">{{name}}</option>
+            {%endfor%}
+        </select>
+    </div>
+    <div class="select-candidates-block">
+        <label for="candidates-list">Выберите кандидатов, которые должны отобразится в отчёте</label><br />
+        <select id="candidates-list" name="candidates-list" multiple>
+            {%for name in candidate_names %}
+            <option value="{{name}}">{{name}}</option>
+            {%endfor%}
+        </select>
+    </div>
+    <span>Выберите период, за который нужно сформировать отчёт:</span>
+    <div class="period-block">
+        <div class="start-period-block select-period-block">
+            <label for="start-period">Дата начала</label>
+            <input type="date" id="start-period" name="start-period"/>
+        </div>
+        <div class="end-period-block select-period-block">
+            <label for="end-period">Дата окончания</label>
+            <input type="date" id="end-period" name="end-period"/>
+        </div>
+    </div>
+    <button type="submit" disabled>Выгрузить отчёт</button>
+</form>

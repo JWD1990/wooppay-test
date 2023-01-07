@@ -1,0 +1,32 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+select {
+    width: 100%;
+    margin: 5px 0 15px;
+}
+
+.period-block {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 25px;
+}
+
+.select-period-block {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#instrucion-msg {
+    margin: 10px 0;
+    border: 1px solid red;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
